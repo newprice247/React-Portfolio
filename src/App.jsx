@@ -18,7 +18,7 @@ function App() {
             <img
             alt="nature"
             className="h-[30rem] w-full object-cover object-center"
-            src="/src/assets/20230615_134613 (1).jpg"
+            src="./src/assets/nathanPic.jpg"
           />
           </div>
         </Card>
