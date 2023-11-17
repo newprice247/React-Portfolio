@@ -4,17 +4,17 @@ const currentYear = new Date().getFullYear();
  
  export default function Footer() {
   return (
-    <footer className="relative w-full" > 
+    <footer className=" w-full" style={{ position: 'fixed', bottom: '0' }}> 
       <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
+        <div className="mt-12 flex w-full flex-col items-center justify-center py-10 md:flex-row md:justify-between">
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+            className="mb-4 text-center font-normal text-myColor-3 md:mb-0"
           >
             &copy; {currentYear} <a href="https://github.com/newprice247">Nathaniel Price</a>. All
             Rights Reserved.
           </Typography>
-          <div className="flex gap-12 text-blue-gray-900 sm:justify-center">
+          <div className="flex gap-12 text-myColor-2 sm:justify-center">
             <Typography as="a" href="https://www.linkedin.com/in/nathaniel-price-4350a915a/" target="_blank" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path

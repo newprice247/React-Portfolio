@@ -18,6 +18,7 @@ export default withMT({
           3: "#e9c46a",
           4: "#f4a261",
           5: "#e76f51",
+          black: "#000000",
         },
       },
     },
