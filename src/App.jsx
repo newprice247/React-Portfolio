@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
+import backgroundImage from './assets/backgroundImage.jpg'
 import { Outlet } from 'react-router-dom'
 import {
   Card, Typography
@@ -9,17 +10,18 @@ import {
 function App() {
 
   return (
-    <>
+    <div className="App"
+    >
       <Header />
       <main
         variant="gradient"
         color="gray"
-        className="mx-3"
-        >
+        className="mx-3 h-[100vh]"
+      >
         <Outlet />
       </main>
       < Footer />
-    </>
+    </div>
   )
 }
 

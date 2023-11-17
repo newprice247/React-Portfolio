@@ -7,7 +7,7 @@ import {
   IconButton,
   Card,
 } from "@material-tailwind/react";
-
+import nathanPic from "../assets/nathanPic.jpg";
 import { Link, useLocation } from 'react-router-dom';
 
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
               <img
                 alt="Nathan Price"
                 className="h-[50vh] w-[50vw] object-contain object-left"
-                src="./src/assets/nathanPic.jpg"
+                src={nathanPic}
               />
             </div>
           </Card>
