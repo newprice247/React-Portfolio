@@ -10,7 +10,17 @@ export default withMT({
     './src/**/*.tsx',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        myColor: {
+          1: "#264653",
+          2: "#2a9d8f",
+          3: "#e9c46a",
+          4: "#f4a261",
+          5: "#e76f51",
+        },
+      },
+    },
   },
   plugins: [],
 })
