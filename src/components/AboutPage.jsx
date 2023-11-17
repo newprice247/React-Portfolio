@@ -10,6 +10,7 @@ import {
 
 import { Link, useLocation } from 'react-router-dom';
 
+
 export default function AboutPage() {
     return (
         <>
@@ -17,8 +18,8 @@ export default function AboutPage() {
           <Card className="mb-12 mt-12 overflow-hidden">
             <div>
               <img
-                alt="nature"
-                className="h-[30rem] w-full object-cover object-center"
+                alt="Nathan Price"
+                className="h-[50vh] w-[50vw] object-contain object-left"
                 src="./src/assets/nathanPic.jpg"
               />
             </div>

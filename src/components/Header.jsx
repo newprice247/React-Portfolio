@@ -10,6 +10,90 @@ import {
 
 import { Link, useLocation } from 'react-router-dom';
 
+import {
+  SpeedDial,
+  SpeedDialHandler,
+  SpeedDialContent,
+  SpeedDialAction,
+} from "@material-tailwind/react";
+import {
+  PlusIcon,
+  PresentationChartLineIcon,
+  UserCircleIcon,
+  HomeIcon,
+  CogIcon,
+  Square3Stack3DIcon,
+  ArrowLeftCircleIcon
+} from "@heroicons/react/24/outline";
+
+export function SpeedDialWithTextInside() {
+  const currentPage = useLocation().pathname;
+  return (
+    <div className=" h-auto w-full">
+      <div className=" top-0 right-0">
+        <SpeedDial placement="left">
+          <SpeedDialHandler>
+          <IconButton size="lg" className="rounded-full">
+                  {currentPage === '/' ? (
+                    <HomeIcon className="h-5 w-5 transition-transform group-hover:rotate-180" />
+                  ) : currentPage === '/about' ? (
+                    <UserCircleIcon className="h-5 w-5 transition-transform group-hover:rotate-180" />
+                  ) : currentPage === '/projects' ? (
+                    <PresentationChartLineIcon className="h-5 w-5 transition-transform group-hover:rotate-180" />
+                  ) : null}
+              </IconButton>
+          </SpeedDialHandler>
+          <SpeedDialContent className="flex-row">
+            <Link 
+              to="/"
+              //       variant="small"
+              //       color="white"
+              className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
+            >
+            <SpeedDialAction className="h-16 w-16">
+              <HomeIcon className="h-5 w-5"/>
+              <Typography color="blue-gray" className="text-xs font-normal">
+                Home
+              </Typography>
+            </SpeedDialAction>
+            </Link>
+
+            <Link 
+              to="/about"
+              //       variant="small"
+              //       color="white"
+              className={currentPage === '/about' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
+            >
+            <SpeedDialAction className="h-16 w-16">
+              <UserCircleIcon className="h-5 w-5" />
+              <Typography color="blue-gray" className="text-xs font-normal">
+                About
+              </Typography>
+            </SpeedDialAction>
+            </Link>
+            
+            <Link 
+              to="/projects"
+              //       variant="small"
+              //       color="white"
+              className={currentPage === '/projects' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
+            >
+            <SpeedDialAction className="h-16 w-16">
+              <PresentationChartLineIcon className="h-5 w-5" />
+              <Typography color="blue-gray" className="text-xs font-normal">
+                Projects
+              </Typography>
+            </SpeedDialAction>
+            </Link>
+
+            
+            
+          </SpeedDialContent>
+        </SpeedDial>
+      </div>
+    </div>
+  );
+}
 function Navigation() {
   const [openNav, setOpenNav] = React.useState(false);
   const currentPage = useLocation().pathname;
@@ -21,36 +105,36 @@ function Navigation() {
     );
   }, []);
  
-  const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-white">
-      <Link
-        as="li"
-        to="/"
-        variant="small"
-        color="white"
-        className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
-      >
-          Home
-      </Link>
-      <Link
-        as="li"
-        to="/"
-        variant="small"
-        color="white"
-        className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
-      >
-          Projects
-      </Link><Link
-        as="li"
-        to="/"
-        variant="small"
-        color="white"
-        className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
-      >
-          About
-      </Link>
-    </ul>
-  );
+  // const navList = (
+  //   <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-white">
+  //     <Link
+  //       as="li"
+  //       to="/"
+  //       variant="small"
+  //       color="white"
+  //       className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
+  //     >
+  //         Home
+  //     </Link>
+  //     <Link
+  //       as="li"
+  //       to="/"
+  //       variant="small"
+  //       color="white"
+  //       className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
+  //     >
+  //         Projects
+  //     </Link><Link
+  //       as="li"
+  //       to="/"
+  //       variant="small"
+  //       color="white"
+  //       className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
+  //     >
+  //         About
+  //     </Link>
+  //   </ul>
+  // );
  
   return (
     <div className="-m-6 max-h-[768px] w-100vw">
@@ -65,12 +149,13 @@ function Navigation() {
             as="a"
             href="#"
             color="white"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
+            className="mr-4 cursor-pointer py-1.5 font-large"
           >
             Nathaniel Price
           </Typography>
           <div className="flex items-center gap-4">
-            <div className="mr-20 hidden lg:block">{navList}</div>
+            {/* <div className="mr-20 hidden lg:block">{navList}</div> */}
+            < SpeedDialWithTextInside />
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

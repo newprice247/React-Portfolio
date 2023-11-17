@@ -2,7 +2,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
 import { Outlet } from 'react-router-dom'
-import background from './assets/backgroundImage.jpg'
 import {
   Card, Typography
 } from '@material-tailwind/react'
@@ -15,7 +14,7 @@ function App() {
       <main
         variant="gradient"
         color="gray"
-        className="mx-3 from-myColor-1 to-myColor-3"
+        className="mx-3"
         >
         <Outlet />
       </main>

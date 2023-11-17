@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Error from './components/Error.jsx'
 import Homepage from './components/Homepage.jsx'
 import AboutPage from './components/AboutPage.jsx'
+import Project from './components/Project.jsx'
 import './App.css'
 import './index.css'
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <AboutPage />,
+      },
+      {
+        path: '/projects',
+        element: <Project />,
       },
     ],
   }
