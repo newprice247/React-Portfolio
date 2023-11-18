@@ -2,9 +2,9 @@ import { Typography } from "@material-tailwind/react";
  
 const currentYear = new Date().getFullYear();
  
- export default function Footer() {
+export default function Footer() {
   return (
-    <footer className=" w-full"> 
+    <footer className="fixed bottom-0 w-full"> 
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="mt-12 flex w-full flex-col items-center justify-center py-10 md:flex-row md:justify-between">
           <Typography
