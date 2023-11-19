@@ -1,5 +1,5 @@
 import React from 'react'
-// import { TypeAnimation } from 'react-type-animation'
+ import { TypeAnimation } from 'react-type-animation'
 // import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 // import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 // import {
@@ -67,12 +67,39 @@ export default function Homepage() {
         <>
             <div
                 className='h-[75.5vh] flex flex-wrap items-center justify-center'
-            >   
+            >
                 <div className='text-white text-2xl w-full sm:w-full md:w-full lg:w-full xl:w-1/2 '>
                     <p>Welcome</p>
                     <h1 className='text-6xl text-light-blue-300'> I'm Nathaniel Price</h1>
+                    <div className='text-myColor-3 text-3xl'>
+                       <TypeAnimation
+                        preRenderFirstString={true}
+                        sequence={[
+                            500,
+                            'Full Stack Web Developer',
+                            1000,
+                            'JavaScript Enthusiast',
+                            1000,
+                            'MERN Stack Developer',
+                            1000,
+                            'Avid learner',
+                            1000,
+                            'Problem solver',
+                            1000,
+                            'Team player',
+                            1000,
+                            'Creator',
+                            1000,
+
+                            
+                        ]}
+                        speed={50}
+                        repeat={Infinity}
+                    /> 
+                    </div>
+                    
                 </div>
-                
+
 
             </div>
 
