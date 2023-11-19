@@ -1,9 +1,37 @@
-import React from "react";
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    Typography,
+    Button,
+} from "@material-tailwind/react";
 
-export default function Project() {
+export default function Project(props) {
     return (
-        <div className='h-[75.5vh]'>
-            <h1 className='mt-[200px] text-myColor-2'>Project</h1>
-        </div>
+    <Card className="mt-40 w-96  bg-myColor-1" style={{ backgroundImage: 'url("/shutterstock_228650476.jpg") ' }}>
+                <CardHeader color="white" className="relative ">
+                    <img
+                        src={props.projectImage}
+                        alt="card-image"
+                    />
+                </CardHeader>
+                <CardBody 
+                    className="text-myColor-3"
+                    
+                >
+                    <Typography variant="h5" color="blue-gray" className="mb-2 text-white">
+                        {props.projectName}
+                    </Typography>
+                    <Typography>
+                        {props.projectDescription}
+                    </Typography>
+                </CardBody>
+                <CardFooter className="pt-0">
+                    <Button onClick={() => window.open(props.projectLink, "_blank")}>
+                        Github Repo
+                    </Button>
+                </CardFooter>
+            </Card>
     );
-    }
+}

@@ -15,7 +15,7 @@ function App() {
       <main
         variant="gradient"
         color="gray"
-        className="mx-3 h-[100vh]"
+        className="mx-0"
       >
         <Outlet />
       </main>

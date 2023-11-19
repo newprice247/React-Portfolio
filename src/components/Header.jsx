@@ -29,13 +29,13 @@ import {
 export function SpeedDialWithTextInside() {
   const currentPage = useLocation().pathname;
   return (
-    <div className=" h-auto w-full">
+    <div className=" h-full w-full">
       <div className=" top-0 right-0">
         <SpeedDial placement="left">
           <SpeedDialHandler>
-          <IconButton size="lg" className="rounded-full">
+          <IconButton size="lg" className="rounded-full " >
                   {currentPage === '/' ? (
-                    <HomeIcon className="h-5 w-5 transition-transform group-hover:rotate-180" />
+                    <HomeIcon className="h-5 w-5 transition-transform group-hover:scale-125 group-hover:text-blue-300" />
                   ) : currentPage === '/about' ? (
                     <UserCircleIcon className="h-5 w-5 transition-transform group-hover:rotate-180" />
                   ) : currentPage === '/projects' ? (
@@ -43,7 +43,7 @@ export function SpeedDialWithTextInside() {
                   ) : null}
               </IconButton>
           </SpeedDialHandler>
-          <SpeedDialContent className="flex-row">
+          <SpeedDialContent className="flex-row justify-center flex">
             <Link 
               to="/"
               //       variant="small"
