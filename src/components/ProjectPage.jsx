@@ -98,6 +98,8 @@ export default function ProjectPage() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             variants={cardVariants}
+            animate={{ y: 50 }}
+  transition={{ delay: 0.2, duration: 1 }}
             
             className="flex flex-wrap items-center justify-center gap-6">
             {projects.map((project) => (

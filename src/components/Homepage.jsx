@@ -70,6 +70,8 @@ export default function Homepage() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
+                animate={{ y: 10 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
                 className='h-[75.5vh] flex flex-wrap items-center justify-center'
             >
                 <div className='text-white text-2xl w-full sm:w-full md:w-full lg:w-full xl:w-1/2 '>
