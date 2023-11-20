@@ -71,7 +71,7 @@ export default function Homepage() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 animate={{ y: 10 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
+                transition={{ delay: 0.2, duration: 1 }}
                 className='h-[75.5vh] flex flex-wrap items-center justify-center'
             >
                 <div className='text-white text-2xl w-full sm:w-full md:w-full lg:w-full xl:w-1/2 '>
@@ -81,7 +81,7 @@ export default function Homepage() {
                         <TypeAnimation
                             preRenderFirstString={false}
                             sequence={[
-                                500,
+                                2000,
                                 'Full Stack Web Developer',
                                 1000,
                                 'JavaScript Enthusiast',
@@ -97,7 +97,7 @@ export default function Homepage() {
                                 'Creator',
                                 1000,
                             ]}
-                            speed={50}
+                            speed={{ deleteSpeed: 100, typeSpeed: 100 }}
                             repeat={Infinity}
                         />
                     </div>

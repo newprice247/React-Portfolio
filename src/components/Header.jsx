@@ -54,9 +54,9 @@ export function SpeedDialWithTextOutside() {
               //       color="white"
               className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-              <SpeedDialAction className="m-3 h-16 w-16">
+              <SpeedDialAction className="m-3 h-16 w-16 bg-gray-900 text-blue-400 border-myColor-3">
                 <HomeIcon className="h-5 w-5" />
-                <Typography color="blue-gray" className="text-xs font-normal">
+                <Typography color="blue-gray" className="text-xs font-normal text-white">
                   Home
                 </Typography>
               </SpeedDialAction>
@@ -67,9 +67,9 @@ export function SpeedDialWithTextOutside() {
               //       color="white"
               className={currentPage === '/about' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-              <SpeedDialAction className="m-3 h-16 w-16">
+              <SpeedDialAction className="m-3 h-16 w-16 bg-gray-900 text-blue-400 border-myColor-3">
                 <UserCircleIcon className="h-5 w-5" />
-                <Typography color="blue-gray" className="text-xs font-normal">
+                <Typography color="blue-gray" className="text-xs font-normal text-white">
                   About
                 </Typography>
               </SpeedDialAction>
@@ -80,9 +80,9 @@ export function SpeedDialWithTextOutside() {
               //       color="white"
               className={currentPage === '/projects' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-              <SpeedDialAction className="m-3 h-16 w-16">
+              <SpeedDialAction className="m-3 h-16 w-16 bg-gray-900 text-blue-400 border-myColor-3 ">
                 <PresentationChartLineIcon className="h-5 w-5" />
-                <Typography color="blue-gray" className="text-xs font-normal">
+                <Typography color="blue-gray" className="text-xs font-normal text-white">
                   Projects
                 </Typography>
               </SpeedDialAction>
@@ -93,9 +93,9 @@ export function SpeedDialWithTextOutside() {
               //       color="white"
               className={currentPage === '/contact' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-              <SpeedDialAction className="m-3 h-16 w-16">
+              <SpeedDialAction className="m-3 h-16 w-16 bg-gray-900 text-blue-400 border-myColor-3 ">
                 <EnvelopeIcon className="h-5 w-5" />
-                <Typography color="blue-gray" className="text-xs font-normal">
+                <Typography color="blue-gray" className="text-xs font-normal text-white">
                   Contact
                 </Typography>
               </SpeedDialAction>

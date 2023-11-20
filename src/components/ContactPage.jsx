@@ -1,16 +1,96 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
+    const [state, handleSubmit] = useForm("xoqozbdv");
+    if (state.succeeded) {
+        return alert("Thank you for your message!");
+    }
     return (
         <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        animate={{ y: 10 }}
-  transition={{ delay: 0.2, duration: 0.5 }}
-         className="flex md:flex-row flex-col justify-center items-center h-full">
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            animate={{ y: -10 }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="flex lg:flex-row flex-col justify-center items-center h-full">
             <h1 className="text-4xl text-myColor-3 mb-6 mt-40">Contact Me</h1>
+            <section className="bg-opacity-0 dark:bg-gray-900 lg:mt-40">
+                <div className=" px-4 mx-auto max-w-screen-md">
+                    {/* <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2> */}
+                    <p className="font-light text-center text-gray-200 sm:text-xl mb-10">Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
+                        Simply fill the from and send me an email.</p>
+                    <form
+                        action="https://formspree.io/f/xoqozbdv"
+                        className="space-y-8 mb-10 lg:mb-0"
+                        method="POST"
+                        onSubmit={handleSubmit}>
+                        <div>
+                            <label 
+                            htmlFor="email" 
+                            className="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-300">Your email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                placeholder="name@flowbite.com"
+                                required
+                            />
+                            <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
+                            />
+
+                        </div>
+                        <div>
+                            <label
+                                htmlFor="subject"
+                                className="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-300"
+                            >
+                                Subject
+                            </label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                placeholder="Let us know how we can help you"
+                                required
+                            />
+                            <ValidationError
+                                prefix="Subject"
+                                field="subject"
+                                errors={state.errors}
+                            />
+                        </div>
+                        <div className="sm:col-span-2">
+                            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-400">Your message</label>
+                            <textarea
+                                id="message"
+                                rows="6"
+                                name="message"
+                                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Leave a comment..."
+
+                            >
+                            </textarea>
+                            <ValidationError
+                                prefix="Message"
+                                field="message"
+                                errors={state.errors}
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-myColor-1 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                            disabled={state.submitting}
+                        >Send message</button>
+                    </form>
+                </div>
+            </section>
             <div className="flex flex-col justify-center items-center gap-6 mt-0 md:mt-40 md:border-l-4 md:border-myColor-2 md:ml-10 md:pl-20 md:py-10">
                 <h2 className="text-2xl text-myColor-3">Email:</h2>
                 <div className="text-white hover:text-blue-500">
@@ -18,15 +98,15 @@ export default function Contact() {
                 </div>
 
                 <h2 className="text-2xl text-myColor-3">Phone:</h2>
-                <div  className="text-white hover:text-blue-500">
+                <div className="text-white hover:text-blue-500">
                     <a href="tel:1-404-668-5726">(321) 258-7592</a>
                 </div>
                 <h2 className="text-2xl text-myColor-3">LinkedIn:</h2>
-                <div  className="text-white hover:text-blue-500">
+                <div className="text-white hover:text-blue-500">
                     <a href="https://www.linkedin.com/in/nathaniel-price-7a8b0a1b5/">Nathaniel Price</a>
                 </div>
                 <h2 className="text-2xl text-myColor-3">GitHub:</h2>
-                <div  className="text-white hover:text-blue-500">
+                <div className="text-white hover:text-blue-500">
                     <a href="https://github.com/newprice247">newprice247</a>
                 </div>
             </div>
