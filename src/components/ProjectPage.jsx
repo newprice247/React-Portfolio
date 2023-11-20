@@ -9,6 +9,7 @@
 
 import React from "react";
 import Project from "./Project";
+import { motion } from "framer-motion"
 
 const projects = [
     {
@@ -71,13 +72,34 @@ const projects = [
         projectImage: "/codeQuiz.png",
         projectLink: "https://github.com/newprice247/Code-Quiz-Mod-4"
     },
-    
+
 
 ];
 
+const cardVariants = {
+        offscreen: {
+            y: 300
+        },
+        onscreen: {
+            y: 50,
+            rotate: -10,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.8
+            }
+        }
+};
+
 export default function ProjectPage() {
     return (
-        <div className="flex flex-wrap items-center justify-center gap-6">
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            variants={cardVariants}
+            
+            className="flex flex-wrap items-center justify-center gap-6">
             {projects.map((project) => (
                 <Project
                     projectName={project.projectName}
@@ -87,6 +109,6 @@ export default function ProjectPage() {
                 />
             ))}
 
-        </div>
+        </motion.div>
     );
 }
