@@ -20,7 +20,7 @@ export default function Contact() {
                 <div className=" px-4 mx-auto max-w-screen-md">
                     {/* <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2> */}
                     <p className="font-light text-center text-gray-200 sm:text-xl mb-10">Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
-                        Simply fill the from and send me an email.</p>
+                        Simply fill out the form and send me an email!</p>
                     <form
                         action="https://formspree.io/f/xoqozbdv"
                         className="space-y-8 mb-10 lg:mb-0"
