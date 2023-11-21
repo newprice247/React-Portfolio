@@ -1,15 +1,6 @@
 import React from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-  Card,
-} from "@material-tailwind/react";
 import nathanPic from "/nathanPic.jpg";
 import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
 
 
 export default function AboutPage() {
