@@ -10,6 +10,7 @@ import Homepage from './components/Homepage.jsx';
 import AboutPage from './components/AboutPage.jsx';
 import ProjectPage from './components/ProjectPage.jsx';
 import ContactPage from './components/ContactPage.jsx';
+import ResumePage from './components/Resume.jsx';
 import './App.css';
 import './index.css';
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <ContactPage />,
+      },
+      {
+        path: '/resume',
+        element: <ResumePage />,
       },
     ],
   },

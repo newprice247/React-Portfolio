@@ -23,7 +23,8 @@ import {
   Square3Stack3DIcon,
   PresentationChartLineIcon,
   UserCircleIcon,
-  EnvelopeIcon
+  EnvelopeIcon,
+  DocumentTextIcon
 } from "@heroicons/react/24/outline";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
  
@@ -70,7 +71,7 @@ function DefaultPagination() {
             to="/"
             className={currentPage === '/' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-                <IconButton {...getItemProps(1)} size="lg" className="rounded-full " >
+                <IconButton {...getItemProps(1)} size="lg" className="rounded-full text-blue-400 hover:border-2 hover:border-myColor-3" >
                   <HomeIcon className="h-5 w-5 transition-transform group-hover:scale-125 group-hover:text-blue-300" />
                 </IconButton>
             </Link>
@@ -78,7 +79,7 @@ function DefaultPagination() {
             to="/about"
             className={currentPage === '/about' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-            <IconButton {...getItemProps(2)} size="lg" className="rounded-full " >
+            <IconButton {...getItemProps(2)} size="lg" className="rounded-full text-blue-400 hover:border-2 hover:border-myColor-3" >
               <UserCircleIcon className="h-5 w-5 transition-transform group-hover:scale-125 group-hover:text-blue-300" />
               </IconButton>
             </Link>
@@ -86,7 +87,7 @@ function DefaultPagination() {
             to="/projects"
             className={currentPage === '/projects' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-               <IconButton {...getItemProps(3)} size="lg" className="rounded-full " >
+               <IconButton {...getItemProps(3)} size="lg" className="rounded-full text-blue-400 hover:border-2 hover:border-myColor-3" >
               <PresentationChartLineIcon className="h-5 w-5 transition-transform group-hover:scale-125 group-hover:text-blue-300" />
               </IconButton>
             </Link>
@@ -94,8 +95,16 @@ function DefaultPagination() {
             to="/contact"
             className={currentPage === '/contact' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
             >
-              <IconButton {...getItemProps(4)} size="lg" className="rounded-full " >
+              <IconButton {...getItemProps(4)} size="lg" className="rounded-full text-blue-400 hover:border-2 hover:border-myColor-3" >
               <EnvelopeIcon className="h-5 w-5 transition-transform group-hover:scale-125 group-hover:text-blue-300" />
+              </IconButton>
+            </Link>
+            <Link
+            to="/resume"
+            className={currentPage === '/resume' ? 'nav-link active p-1 font-normal' : 'nav-link p-1 font-normal'}
+            >
+              <IconButton {...getItemProps(5)} size="lg" className="rounded-full text-blue-400 hover:border-2 hover:border-myColor-3" >
+              <DocumentTextIcon className="h-5 w-5 transition-transform group-hover:scale-125 group-hover:text-blue-300" />
               </IconButton>
             </Link>
       </>
@@ -118,6 +127,9 @@ function DefaultPagination() {
              
               <NavIcons />
             ) : currentPage === '/contact' ? (
+              <NavIcons />
+              
+            ) : currentPage === '/resume' ? (
               <NavIcons />
               
             ) : null}
