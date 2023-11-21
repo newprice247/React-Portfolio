@@ -39,7 +39,6 @@ export default function ResumePage() {
       <section className="section">
         <h2>Skills</h2>
         <ul>
-          {/* List your skills here */}
           <li>JavaScript (ES6+), HTML5, CSS3</li>
           <li>React.js, Redux, HTML, CSS, Bootstrap, Material-UI</li>
           <li>Node.js, Express.js</li>
@@ -47,8 +46,6 @@ export default function ResumePage() {
           {/* ... */}
         </ul>
       </section>
-
-      {/* Include other sections like Education, Work Experience, Certifications, etc. */}
     
     </motion.div>
   );
