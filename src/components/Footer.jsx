@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
  
 const currentYear = new Date().getFullYear();
 
-
+// Footer component
 export default function Footer() {
   return (
     <footer className=" w-full" > 

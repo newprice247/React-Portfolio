@@ -1,12 +1,10 @@
 import React from "react";
+// Imports for the navigation bar styling
 import {
   Navbar,
   IconButton,
   Typography,
 } from "@material-tailwind/react";
-
-import { Link, useLocation } from 'react-router-dom';
-
 import {
   HomeIcon,
   PresentationChartLineIcon,
@@ -15,18 +13,22 @@ import {
   DocumentTextIcon
 } from "@heroicons/react/24/outline";
 
+// Imports the link component from react-router-dom, in order to handle navigation
+import { Link, useLocation } from 'react-router-dom';
+
+
+// Handles the Nav icons and their onClick and styling
 function DefaultPagination() {
   const [active, setActive] = React.useState(1);
   const currentPage = useLocation().pathname;
-
   const getItemProps = (index) => ({
     variant: active === index ? "filled" : "text",
     color: "white",
     onClick: () => setActive(index),
   });
   
+  // Reusable NavIcons component for the navigation bar
   const NavIcons = (props) => {
-
     return (
       <>
         <Link
@@ -45,6 +47,7 @@ function DefaultPagination() {
     );
   };
 
+  // Array of objects for the NavIcons component
   const navArray = [
     {
       link: "/about",
@@ -77,6 +80,7 @@ function DefaultPagination() {
   return (
     <div className="flex items-center gap-4">
       <div className="flex items-center gap-2">
+         {/* Maps through the navArray and returns the NavIcons component */}
         {navArray.map((nav) => (
           <NavIcons
             link={nav.link}
@@ -89,6 +93,7 @@ function DefaultPagination() {
   );
 }
 
+// Uses the Navbar component from material-tailwind-react to create the navigation bar, and imports the navArray and NavIcons component
 function Navigation() {
   return (
     <div className="-m-6 max-h-[768px] w-full">

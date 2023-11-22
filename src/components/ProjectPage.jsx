@@ -1,16 +1,10 @@
-// import {
-//     Card,
-//     CardHeader,
-//     CardBody,
-//     CardFooter,
-//     Typography,
-//     Button,
-// } from "@material-tailwind/react";
+
 
 import React from "react";
 import Project from "./Project";
 import { motion } from "framer-motion"
 
+// Project data for the Project component that will be rendered in the ProjectPage component
 const projects = [
     {
         projectName: "PWA-Text-Editor",
@@ -72,10 +66,9 @@ const projects = [
         projectImage: "/codeQuiz.png",
         projectLink: "https://github.com/newprice247/Code-Quiz-Mod-4"
     },
-
-
 ];
 
+// Framer motion variants for the Project component that animates the component when it is rendered
 const cardVariants = {
         offscreen: {
             y: 300
@@ -91,6 +84,7 @@ const cardVariants = {
         }
 };
 
+// Exports the ProjectPage component
 export default function ProjectPage() {
     return (
         <motion.div
@@ -106,6 +100,7 @@ export default function ProjectPage() {
                 >
                     Projects
                 </h1>
+                {/* Maps through the projects array and returns the Project component */}
             {projects.map((project) => (
                 <Project
                     projectName={project.projectName}
@@ -114,7 +109,6 @@ export default function ProjectPage() {
                     projectLink={project.projectLink}
                 />
             ))}
-
         </motion.div>
     );
 }

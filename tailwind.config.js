@@ -12,6 +12,7 @@ export default withMT({
   theme: {
     extend: {
       colors: {
+        // Sets the custom colors for the project
         myColor: {
           1: "#264653",
           2: "#2a9d8f",

@@ -1,12 +1,14 @@
 import React from "react";
 import nathanPic from "/nathanPic.jpg";
+
+// imports for framer motion
 import { motion } from "framer-motion";
 
-
+// Will render the About page
 export default function AboutPage() {
   return (
     <>
-
+      
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
