@@ -63,7 +63,7 @@ export default function ResumePage() {
       </h1>
 
       {/* Download button for the resume */}
-      <div className="flex justify-center relative">
+      <div className="flex justify-center relative mb-5">
         <a
           href={pdf}
           target="_blank"
