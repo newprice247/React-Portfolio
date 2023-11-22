@@ -77,7 +77,7 @@ export default function Homepage() {
                 <div className='text-white text-2xl w-full sm:w-full md:w-full lg:w-full xl:w-1/2 '>
                     <p>Welcome</p>
                     <h1 className=' text-light-blue-300 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl'> I'm Nathaniel Price</h1>
-                    <div className='text-myColor-3 text-3xl mt-5'>
+                    <div className='text-myColor-3 md:text-3xl mt-2 text-1xl md:mt-5'>
                         <TypeAnimation
                             preRenderFirstString={false}
                             sequence={[
