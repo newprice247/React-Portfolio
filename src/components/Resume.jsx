@@ -113,7 +113,12 @@ export default function ResumePage() {
   };
 
   return (
-    <div
+    <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    animate={{ y: 10 }}
+    transition={{ delay: 0.2, duration: 1 }}
       className='mt-40 '
     >
       <div className="flex justify-center relative">
@@ -124,7 +129,7 @@ export default function ResumePage() {
           className="bg-blue-500 text-white px-4 py-2 rounded-md max-w-max"
         >
           <AiOutlineDownload className="inline-block mr-1" />
-          Download CV
+          Download Resume
         </a>
       </div>
       <Document file={pdf}>
@@ -147,10 +152,10 @@ export default function ResumePage() {
           className="bg-blue-500 text-white px-4 py-2 rounded-md max-w-max"
         >
           <AiOutlineDownload className="inline-block mr-1" />
-          Download CV
+          Download Resume
         </a>
       </div>
 
-    </div>
+    </motion.div>
   );
 }
