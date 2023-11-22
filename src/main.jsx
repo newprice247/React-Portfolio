@@ -24,6 +24,9 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Homepage />,
+        onLoading: () => {
+          console.log('Loading...');
+        },
       },
       {
         path: '/about',

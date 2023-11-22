@@ -18,14 +18,22 @@ import { Link, useLocation } from 'react-router-dom';
 
 
 // Handles the Nav icons and their onClick and styling
-function DefaultPagination() {
-  const [active, setActive] = React.useState(1);
-  const currentPage = useLocation().pathname;
+export function DefaultPagination() {
+  
   const getItemProps = (index) => ({
     variant: active === index ? "filled" : "text",
     color: "white",
     onClick: () => setActive(index),
+
   });
+  const [active, setActive] = React.useState(1);
+  const currentPage = useLocation().pathname;
+
+  // Update the active state based on the current route
+  React.useEffect(() => {
+    const activeIndex = navArray.findIndex((nav) => nav.link === currentPage);
+    setActive(activeIndex !== -1 ? activeIndex + 1 : 1);
+  }, [currentPage]);
   
   // Reusable NavIcons component for the navigation bar
   const NavIcons = (props) => {
@@ -49,20 +57,21 @@ function DefaultPagination() {
 
   // Array of objects for the NavIcons component
   const navArray = [
+
     {
       link: "/about",
       icon: UserCircleIcon,
-      index: 2,
+      index: 1,
     },
     {
       link: "/projects",
       icon: PresentationChartLineIcon,
-      index: 3,
+      index: 2,
     },
     {
       link: "/",
       icon: HomeIcon,
-      index: 1,
+      index: 3,
     },
     
     {
@@ -83,6 +92,7 @@ function DefaultPagination() {
          {/* Maps through the navArray and returns the NavIcons component */}
         {navArray.map((nav) => (
           <NavIcons
+            key={nav.index}
             link={nav.link}
             icon={nav.icon}
             index={nav.index}
@@ -118,3 +128,4 @@ export default function Header() {
     </div>
   );
 }
+

@@ -17,26 +17,30 @@ function App() {
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       if (currentPage === '/') {
-        navigate('/contact'); // Navigate to the next page
+        navigate('/resume');
+      } else if (currentPage === '/resume') {
+        navigate('/contact');
       } else if (currentPage === '/contact') {
-        navigate('/projects'); // Navigate to the next page
-      } else if (currentPage === '/projects') {
-        navigate('/about'); // Navigate to the next page
+        navigate('/about');
       } else if (currentPage === '/about') {
-        navigate('/'); // Navigate to the next page
+        navigate('/projects');
+      } else if (currentPage === '/projects') {
+        navigate('/');
       }
     },
     onSwipedRight: () => {
       if (currentPage === '/') {
-        navigate('/about'); // Navigate to the next page
-      } else if (currentPage === '/about') {
-        navigate('/projects'); // Navigate to the next page
+        navigate('/projects');
       } else if (currentPage === '/projects') {
-        navigate('/contact'); // Navigate to the next page
+        navigate('/about');
+      } else if (currentPage === '/about') {
+        navigate('/contact');
       } else if (currentPage === '/contact') {
-        navigate('/'); // Navigate to the next page
+        navigate('/resume');
+      } else if (currentPage === '/resume') {
+        navigate('/');
       }
-    }
+    },
   });
 
   // Render the app, using Outlet to determine the page, sandwiched between the header and footer
