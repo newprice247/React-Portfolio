@@ -9,8 +9,8 @@ import {
 
 export default function Project(props) {
     return (
-    <Card className="mt-40 w-96  bg-myColor-1" style={{ backgroundImage: 'url("/shutterstock_228650476.jpg") ' }}>
-                <CardHeader color="white" className="relative ">
+    <Card className="mt-20 w-96  bg-myColor-1 " style={{ backgroundImage: 'url("/shutterstock_228650476.jpg") ' }}>
+                <CardHeader color="white" className="relative">
                     <img
                         src={props.projectImage}
                         alt="card-image"
@@ -28,7 +28,9 @@ export default function Project(props) {
                     </Typography>
                 </CardBody>
                 <CardFooter className="pt-0">
-                    <Button onClick={() => window.open(props.projectLink, "_blank")}>
+                    <Button 
+                    className="hover:bg-blue-400 hover:text-myColor-1 transition-transform hover:scale-105"
+                    onClick={() => window.open(props.projectLink, "_blank")}>
                         Github Repo
                     </Button>
                 </CardFooter>

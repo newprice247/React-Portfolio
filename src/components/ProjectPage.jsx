@@ -99,9 +99,13 @@ export default function ProjectPage() {
             viewport={{ once: true }}
             variants={cardVariants}
             animate={{ y: 50 }}
-  transition={{ delay: 0.2, duration: 1 }}
-            
+            transition={{ delay: 0.2, duration: 1 }}
             className="flex flex-wrap items-center justify-center gap-6">
+                <h1
+                className="text-5xl text-myColor-3 text-center mt-40 w-full"
+                >
+                    Projects
+                </h1>
             {projects.map((project) => (
                 <Project
                     projectName={project.projectName}
