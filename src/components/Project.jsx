@@ -30,7 +30,7 @@ export default function Project(props) {
                     {props.projectDescription}
                 </Typography>
             </CardBody>
-            <CardFooter className="pt-0">
+            <CardFooter className="pt-0 flex flex-col gap-6">
                 <Button
                     className="hover:bg-blue-400 hover:text-myColor-1 transition-transform hover:scale-105"
                     onClick={() => window.open(props.projectLink, "_blank")}>
@@ -38,15 +38,15 @@ export default function Project(props) {
                 </Button>
                 {props.projectLink2 && (
                     <Button
-                        className="hover:bg-blue-400 hover:text-myColor-1 transition-transform hover:scale-105 ml-5"
+                        className="hover:bg-blue-400 hover:text-myColor-1 transition-transform hover:scale-105  "
                         onClick={() => window.open(props.projectLink2, "_blank")}
                     >
-                        Deployed App
+                        {props.projectName} Website
                     </Button>
                 )}
                 {props.projectLink3 && (
                     <Button
-                        className="hover:bg-blue-400 hover:text-myColor-1 transition-transform hover:scale-105 ml-5"
+                        className="hover:bg-blue-400 hover:text-myColor-1 transition-transform hover:scale-105 "
                         onClick={() => window.open(props.projectLink3, "_blank")}
                     >
                         Walkthrough Video

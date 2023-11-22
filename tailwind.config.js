@@ -11,6 +11,12 @@ export default withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        // Sets the custom breakpoints for the project
+        xxs: "320px",
+        xs: "375px",
+        sm: "412px"
+      },
       colors: {
         // Sets the custom colors for the project
         myColor: {
