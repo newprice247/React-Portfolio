@@ -102,7 +102,6 @@ function Navigation() {
         style={{ position: "fixed", border: "none", backgroundColor: "transparent" }}
       >
         <Typography color="blue-gray" className="text-xl font-normal text-myColor-3">
-         
         </Typography>
         <div className="flex items-center justify-center text-blue-gray-900">
           <DefaultPagination />
