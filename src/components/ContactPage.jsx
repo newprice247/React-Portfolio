@@ -86,7 +86,7 @@ export default function Contact() {
                         </div>
                         <button
                             type="submit"
-                            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-myColor-1 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-400 sm:w-fit hover:bg-myColor-3 hover:text-black focus:ring-4 focus:outline-none focus:ring-primary-300"
                             disabled={state.submitting}
                         >Send message</button>
                     </form>
