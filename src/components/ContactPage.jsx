@@ -15,10 +15,11 @@ export default function Contact() {
             animate={{ y: -10 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             className="flex lg:flex-row flex-col justify-center items-center h-full">
-            <h1 className="text-4xl text-myColor-3 mb-6 mt-40">Contact Me</h1>
             <section className="bg-opacity-0 dark:bg-gray-900 lg:mt-40">
+                
                 <div className=" px-4 mx-auto max-w-screen-md">
                     {/* <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2> */}
+                    
                     <p className="font-light text-center text-gray-200 sm:text-xl mb-10">Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
                         Simply fill out the form and send me an email!</p>
                     <form

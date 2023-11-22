@@ -120,13 +120,18 @@ export default function ResumePage() {
     animate={{ y: 10 }}
     transition={{ delay: 0.2, duration: 1 }}
       className='mt-40 '
-    >
+    > 
+      <h1
+                className="text-5xl text-myColor-3 text-center mt-50 w-full"
+                >
+                    Resume
+                </h1>
       <div className="flex justify-center relative">
         <a
           href={pdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md max-w-max"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md max-w-max mt-20"
         >
           <AiOutlineDownload className="inline-block mr-1" />
           Download Resume
