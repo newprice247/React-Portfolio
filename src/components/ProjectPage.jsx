@@ -81,7 +81,7 @@ const projects = [
         projectDescription: "JobFinder is a job search engine that allows users to search for jobs by title and location. The app uses a handcrafted API to retrieve job data for the user's search query.",
         projectImage: "/jobfinder.png",
         projectLink: "https://github.com/newprice247/Jobfinder",
-        projectLink2: "https://newprice247.github.io/Jobfinder/",
+        projectLink2: "https://project3mernstack-c25ab63e2028.herokuapp.com/",
     },
 ];
 
