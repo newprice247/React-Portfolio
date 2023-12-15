@@ -13,8 +13,8 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        animate={{ y: -10 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        animate={{ y: 10 }}
+        transition={{ delay: 1, duration: 1 }}
         className="flex flex-wrap mt-40 justify-center items-center">
         <div
           className="w-full  sm:w-full md:w-full lg:w-1/3 xl:w-1/3 flex justify-center items-center"

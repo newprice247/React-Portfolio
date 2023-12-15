@@ -76,6 +76,13 @@ const projects = [
         projectLink: "https://github.com/newprice247/Code-Quiz-Mod-4",
         projectLink2: "https://newprice247.github.io/Code-Quiz-Mod-4/",
     },
+    {
+        projectName: "Jobfinder",
+        projectDescription: "JobFinder is a job search engine that allows users to search for jobs by title and location. The app uses a handcrafted API to retrieve job data for the user's search query.",
+        projectImage: "/jobfinder.png",
+        projectLink: "https://github.com/newprice247/Jobfinder",
+        projectLink2: "https://newprice247.github.io/Jobfinder/",
+    },
 ];
 
 // Framer motion variants for the Project component that animates the component when it is rendered
