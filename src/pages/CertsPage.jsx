@@ -5,7 +5,7 @@ import { motion }from "framer-motion";
 function Cert(props) {
   return (
     <div
-      className="flex items-center justify-center flex-col gap-4 mt-40"
+      className="flex items-center justify-center flex-col gap-4"
       >
           <img
           src={props.image}
@@ -17,7 +17,7 @@ function Cert(props) {
         target="_blank"
         href={props.link}
         >
-          Certification
+          View Certificate
         </a>
         <p
         className="text-myColor-3 text-3xl"
@@ -41,6 +41,11 @@ export default function CertsPage() {
     viewport={{ once: true }}
     animate={{ y: 10 }}
     transition={{ delay: .3, duration: .7 }}>
+      <h1
+      className="text-myColor-3 text-5xl text-center mt-40 mb-20"
+      >
+        Certifications
+      </h1>
     <Carousel className="rounded-xl">
       
       <Cert
