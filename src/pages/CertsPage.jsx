@@ -20,7 +20,7 @@ function Cert(props) {
           Certification
         </a>
         <p
-        className="text-white text-3xl"
+        className="text-myColor-3 text-3xl"
         >
           {props.title}
         </p>
