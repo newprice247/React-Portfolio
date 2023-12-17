@@ -25,6 +25,8 @@ function App() {
       } else if (currentPage === '/about') {
         navigate('/projects');
       } else if (currentPage === '/projects') {
+        navigate('/certs');
+      } else if (currentPage === '/certs') {
         navigate('/');
       }
     },
@@ -38,6 +40,8 @@ function App() {
       } else if (currentPage === '/contact') {
         navigate('/resume');
       } else if (currentPage === '/resume') {
+        navigate('/certs');
+      } else if (currentPage === '/certs') {
         navigate('/');
       }
     },

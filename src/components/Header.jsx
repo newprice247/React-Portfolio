@@ -10,7 +10,8 @@ import {
   PresentationChartLineIcon,
   UserCircleIcon,
   EnvelopeIcon,
-  DocumentTextIcon
+  DocumentTextIcon,
+  AcademicCapIcon,
 } from "@heroicons/react/24/outline";
 
 // Imports the link component from react-router-dom, in order to handle navigation
@@ -83,6 +84,11 @@ export function DefaultPagination() {
       link: "/contact",
       icon: EnvelopeIcon,
       index: 5,
+    },
+    {
+      link: "/certs",
+      icon: AcademicCapIcon,
+      index: 6,
     },
   ];
 

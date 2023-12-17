@@ -12,7 +12,7 @@ import {
 // Exports the Project component, which is used to display the projects on the ProjectPage by mapping over the projects array located in ProjectPage.jsx
 export default function Project(props) {
     return (
-        <Card className="mt-20 w-96  bg-myColor-1 " style={{ backgroundImage: 'url("/shutterstock_228650476.jpg") ' }}>
+        <Card className="mt-20 w-96  bg-myColor-1 " style={{ backgroundImage: 'url("/images/shutterstock_228650476.jpg") ' }}>
             <CardHeader color="white" className="relative">
                 <img
                     src={props.projectImage}

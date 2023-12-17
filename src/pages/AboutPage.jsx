@@ -1,5 +1,5 @@
 import React from "react";
-import nathanPic from "/nathanPic.jpg";
+import nathanPic from "/images/nathanPic.jpg";
 
 // imports for framer motion
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ export default function AboutPage() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         animate={{ y: 10 }}
-        transition={{ delay: 1, duration: 1 }}
+        transition={{ delay: .3, duration: .7 }}
         className="flex flex-wrap mt-40 justify-center items-center">
         <div
           className="w-full  sm:w-full md:w-full lg:w-1/3 xl:w-1/3 flex justify-center items-center"

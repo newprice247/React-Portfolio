@@ -5,12 +5,16 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from '@material-tailwind/react';
 import App from './App.jsx';
-import Error from './components/Error.jsx';
-import Homepage from './components/Homepage.jsx';
-import AboutPage from './components/AboutPage.jsx';
-import ProjectPage from './components/ProjectPage.jsx';
-import ContactPage from './components/ContactPage.jsx';
-import ResumePage from './components/Resume.jsx';
+
+// page imports
+import Error from './pages/Error.jsx';
+import Homepage from './pages/Homepage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import ProjectPage from './pages/ProjectPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+import ResumePage from './pages/ResumePage.jsx';
+import CertsPage from './pages/CertsPage';
+// css imports
 import './App.css';
 import './index.css';
 
@@ -44,6 +48,12 @@ const router = createBrowserRouter([
         path: '/resume',
         element: <ResumePage />,
       },
+      {
+        path: '/certs',
+        element: <CertsPage />,
+      },
+
+      
     ],
   },
 ]);
