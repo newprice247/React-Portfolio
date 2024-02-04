@@ -7,6 +7,14 @@ import { motion } from "framer-motion"
 // Project data for the Project component that will be rendered in the ProjectPage component
 const projects = [
     {
+        projectName: "Sutton Place Hair Salon",
+        projectDescription: "Sutton Place Hair Salon is a full-service salon that offers a wide range of hair care services. The website is designed to be responsive and mobile-friendly, and features a clean, modern design that reflects the salon's upscale aesthetic.",
+        projectImage: "/images/suttonPlace.png",
+        projectLink: "https://github.com/newprice247/SuttonPlace",
+        projectLink2: "suttonplacehairsalon.com",
+        
+    },
+    {
         projectName: "PWA-Text-Editor",
         projectDescription: "The goal of this project was to build a text editor that runs in the browser. The app is a single-page application that features a number of data persistance techniques that serve as redundancyies in the case one of the data storing options is not supported by the browser, and can function offline.",
         projectImage: "/images/texteditor1.png",

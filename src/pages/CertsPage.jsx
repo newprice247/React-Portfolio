@@ -61,6 +61,13 @@ export default function CertsPage() {
       title="HTML, CSS, and Javascript for Web Developers"
       description="This 'beginners guide' to the fundamentals of web design, offered through John Hopkins university and taught by Yaakov Chaikin, provided essential insights into web page coding. Beginning with the basics, I learned to craft modern web pages using HTML and CSS, gradually advancing to the point where I could code pages for automatic rearrangement and resizing based on the user's screen size. This skill set allowed me to create web pages that are seamlessly functional on both mobile phones and desktop computers, eliminating the need for 'pinch and zoom.' The course culminated in a thorough introduction to JavaScript, the ubiquitous and powerful language of the web. With JavaScript, I acquired the ability to build fully functional web applications employing Ajax to expose server-side functionality and data to end-users. This comprehensive course has equipped me with the tools to create dynamic and user-friendly web experiences."
       />
+
+      <Cert
+      image="/certs/UCFbadge.png"
+      link="https://api.badgr.io/public/assertions/AB-YegeBQhKv4J1U-ihEUQ?identity__email=newprice247%40gmail.com"
+      title="UCF Full Stack Web Development Bootcamp Certificate"
+      description="This intensive, 24-week coding bootcamp, offered through the University of Central Florida, provided a comprehensive curriculum that equipped me with the skills to become a full-stack web developer. The course began with the fundamentals of web development, including HTML, CSS, and JavaScript, and gradually progressed to advanced topics such as Node.js, Express, and React. Throughout the course, I developed a strong foundation in computer science, learning to build and deploy web applications, and gained experience working with databases, APIs, and server-side technologies. The course required me to work with diverse teams on demanding timelines to build full functional web applications from start to finish. This comprehensive course has provided me with the skills and knowledge to develop and deploy full-stack web applications, and has equipped me with the tools to succeed in a career as a web developer."
+      />
     </Carousel>
     </motion.div>
   );
