@@ -11,7 +11,7 @@ const projects = [
         projectDescription: "Sutton Place Hair Salon is a full-service salon that offers a wide range of hair care services. The website is designed to be responsive and mobile-friendly, and features a clean, modern design that reflects the salon's upscale aesthetic.",
         projectImage: "/images/suttonPlace.png",
         projectLink: "https://github.com/newprice247/SuttonPlace",
-        projectLink2: "suttonplacehairsalon.com",
+        projectLink2: "https://suttonplacehairsalon.com/",
         
     },
     {
