@@ -19,7 +19,7 @@ const projects = [
         projectDescription: "The goal of this project was to build a text editor that runs in the browser. The app is a single-page application that features a number of data persistance techniques that serve as redundancyies in the case one of the data storing options is not supported by the browser, and can function offline.",
         projectImage: "/images/texteditor1.png",
         projectLink: "https://github.com/newprice247/PWA-Text_Editor",
-        projectLink2: "https://np-pwa-text-editor-fa826b6e9b97.herokuapp.com/",
+        projectLink2: "https://pwa-text-editor-q3bk.onrender.com",
     },
     {
         projectName: "F2F Blog",

@@ -15,9 +15,11 @@ export default function AboutPage() {
         viewport={{ once: true }}
         animate={{ y: 10 }}
         transition={{ delay: .3, duration: .7 }}
-        className="flex flex-wrap mt-40 justify-center items-center">
+        className="flex flex-wrap mt-40 justify-center items-center xl:h-[60vh]"
+        >
+        
         <div
-          className="w-full  sm:w-full md:w-full lg:w-1/3 xl:w-1/3 flex justify-center items-center"
+          className="w-full sm:w-full md:w-full lg:w-1/3 xl:w-1/3 flex justify-center items-center"
         >
           <img
             alt="Nathan Price"
@@ -26,7 +28,7 @@ export default function AboutPage() {
           />
         </div>
         <div
-          className="text-myColor-3 mt-5 h-full w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3"
+          className="text-myColor-3 mt-5 h-full w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3 flex flex-col justify-center items-center"
         >
           <h1 variant="h2" className="mb-10 text-5xl text-myColor-2">
             About Me

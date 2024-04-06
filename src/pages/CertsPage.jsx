@@ -4,7 +4,7 @@ import { motion }from "framer-motion";
 function Cert(props) {
   return (
       <div
-      className="flex items-center justify-center flex-col gap-4 mb-10"
+      className="flex items-center justify-center flex-col gap-4 mb-[14rem]"
       >
           <img
           src={props.image}
